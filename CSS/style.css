@@ -1,18 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family:'roboto', sans-serif;
+    font-family: 'roboto', sans-serif;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     justify-content: center;
-    align-items: center;    
-    background: linear-gradient(135deg,#000000,#1f3d6b);
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #1f3d6b);
 }
 
-header{
+header {
     text-align: center;
     background: transparent;
     color: white;
@@ -20,9 +20,9 @@ header{
 
 }
 
-footer{
+footer {
     background-color: rgb(255, 9, 247);
-    position: absolute; 
+    position: absolute;
     bottom: 0%;
     width: 100%;
     height: 30px;
@@ -31,4 +31,21 @@ footer{
     justify-content: center;
     color: white;
 
+}
+
+.contenido{
+    position: absolute ;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+
+
+    width: 40%;
+    border:1px solid #717377;
+    padding : 20px; 
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113,115,119,0.5);
+    
 }
