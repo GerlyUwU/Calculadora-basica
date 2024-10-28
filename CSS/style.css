@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;    
+    background: linear-gradient(135deg,#000000,#1f3d6b);
+}
+
+header{
+    text-align: center;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+
+}
+
+footer{
+    background-color: rgb(255, 9, 247);
+    position: absolute; 
+    bottom: 0%;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
