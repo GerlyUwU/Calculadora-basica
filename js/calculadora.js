@@ -4,6 +4,16 @@ var pantalla;
 window.onload = function () {
     pantalla = document.getElementById("txt_resultado");
 
+const sepiaToggle = document.getElementById('switch-checkbox');
+
+
+if (sepiaToggle) {
+    sepiaToggle.addEventListener('change', function() {
+        document.body.style.filter = sepiaToggle.checked ? 'sepia(100%)' : 'none';
+    });
+} else {
+    console.log("Error: no se encontró el checkbox con id 'switch-checkbox'.");
+}
 }
 
 function limpiar() {
@@ -14,7 +24,6 @@ function limpiar() {
 function borrar() {
     if (operacion.length > 0) {
         operacion = operacion.substring(0, (operacion.length - 1));
-
     }
     pantalla.value = operacion;
 }
@@ -68,17 +77,17 @@ function clickbutton(element) {
             break;
         case 'b_div':
             if (operacion.length > 0 && validarOperaciones()) {
-                operacion = operacion = "/";
+                operacion = operacion + "/";
             }
             break;
         case 'b_pun':
             if (validarPunto()) {
                 operacion = operacion + ".";
             }
+            break;
         case 'b_ig':
             if (operacion.length > 0) {
                 try {
-                    console.log(eval(operacion));
                     operacion = "" + eval(operacion);
                 } catch (e) {
                     console.log(e);
@@ -92,21 +101,17 @@ function clickbutton(element) {
 }
 
 function validarOperaciones() {
-    if (!operacion.endsWith("+") &&
-        !operacion.endsWith("-") && !operacion.endsWith("*")
-        && !operacion.endsWith("/")) {
-        return true;
-    }
-    return false;
-
+    return !operacion.endsWith("+") &&
+           !operacion.endsWith("-") &&
+           !operacion.endsWith("*") &&
+           !operacion.endsWith("/");
 }
 
 function validarPunto() {
-    if (operacion.length == 0 || !validarOperaciones()) {
+    if (operacion.length === 0 || !validarOperaciones()) {
         return true;
     }
-    var temp = operacion;
-    temp = temp + '.';
+    var temp = operacion + '.';
     try {
         eval(temp);
         return true;
@@ -115,4 +120,3 @@ function validarPunto() {
     }
     return false;
 }
-

@@ -20,17 +20,7 @@ header {
     font-size: 20px;
 }
 
-footer {
-    background-color: rgb(1, 123, 23);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
+
 
 .contenido {
     position: absolute;
@@ -92,5 +82,74 @@ input[type=button]:hover {
 
 #b_ig:hover{
     background-color: #66CF47;
+}
+
+
+:root {
+    --color-green: #ba6606;
+    --color-red: #4193fe;
+    --color-button: #fdffff;
+    --color-black: #000;
+}
+
+
+.switch-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+
+.switch-button .switch-button__label {
+    background-color: var(--color-red);
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: var(--color-green);
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(2rem);
+}
+
+
+footer {
+    background-color: rgb(1, 123, 23);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+}
+
+#switch_boton{
+    font-weight: bold;
+    color: white;
 }
 

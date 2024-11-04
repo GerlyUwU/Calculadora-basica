@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculadora Básica</title>
-        <link rel="stylesheet" href="/CSS/style.css">
-        <script type="text/javascript" src="/js/calculadora.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      
-        
-        <div class="contenido">
-            <header><h1>Calculadora Básica</h1></header>
-            <table>
-                <tr>
-                    <td colspan="4"><input id="txt_resultado" type="text" readonly></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="b_lim" type="button" onclick="limpiar()" value="limpiar"></td>
-                    <td colspan="2"><input id="b_bor" type="button" onclick="borrar()" value="borrar"></td>
-                </tr>
-                <tr>
-                    <td><input id="b07" type="button" onclick="clickbutton(this)" value="7"></td>
-                    <td><input id="b08" type="button" onclick="clickbutton(this)" value="8"></td>
-                    <td><input id="b09" type="button" onclick="clickbutton(this)" value="9"></td>
-                    <td><input id="b_div" type="button" onclick="clickbutton(this)" value="/"></td>
-                </tr>
-                <tr>
-                    <td><input id="b04" type="button" onclick="clickbutton(this)" value="4"></td>
-                    <td><input id="b05" type="button" onclick="clickbutton(this)" value="5"></td>
-                    <td><input id="b06" type="button" onclick="clickbutton(this)" value="6"></td>
-                    <td><input id="b_mul" type="button" onclick="clickbutton(this)" value="x"></td>
-                </tr>
-                <tr>
-                    <td><input id="b01" type="button" onclick="clickbutton(this)" value="1"></td>
-                    <td><input id="b02" type="button" onclick="clickbutton(this)" value="2"></td>
-                    <td><input id="b03" type="button" onclick="clickbutton(this)" value="3"></td>
-                    <td><input id="b_res" type="button" onclick="clickbutton(this)" value="-"></td>
-                </tr>
-                <tr>
-                    <td><input id="b00" type="button" onclick="clickbutton(this)" value="0"></td>
-                    <td><input id="b_pun" type="button" onclick="clickbutton(this)" value="."></td>
-                    <td><input id="b_sum" type="button" onclick="clickbutton(this)" value="+"></td>
-                </tr>
-                <tr>
-                    <td><input id="b_ig" type="button" onclick="clickbutton(this)" value="="></td>
-                </tr>
-               
-            </table>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenido">
+        <header><h1>Calculadora Básica</h1></header>
+        <table>
+            <tr>
+                <td colspan="4"><input id="txt_resultado" type="text" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="b_lim" type="button" onclick="limpiar()" value="limpiar"></td>
+                <td colspan="2"><input id="b_bor" type="button" onclick="borrar()" value="borrar"></td>
+            </tr>
+            <tr>
+                <td><input id="b07" type="button" onclick="clickbutton(this)" value="7"></td>
+                <td><input id="b08" type="button" onclick="clickbutton(this)" value="8"></td>
+                <td><input id="b09" type="button" onclick="clickbutton(this)" value="9"></td>
+                <td><input id="b_div" type="button" onclick="clickbutton(this)" value="/"></td>
+            </tr>
+            <tr>
+                <td><input id="b04" type="button" onclick="clickbutton(this)" value="4"></td>
+                <td><input id="b05" type="button" onclick="clickbutton(this)" value="5"></td>
+                <td><input id="b06" type="button" onclick="clickbutton(this)" value="6"></td>
+                <td><input id="b_mul" type="button" onclick="clickbutton(this)" value="x"></td>
+            </tr>
+            <tr>
+                <td><input id="b01" type="button" onclick="clickbutton(this)" value="1"></td>
+                <td><input id="b02" type="button" onclick="clickbutton(this)" value="2"></td>
+                <td><input id="b03" type="button" onclick="clickbutton(this)" value="3"></td>
+                <td><input id="b_res" type="button" onclick="clickbutton(this)" value="-"></td>
+            </tr>
+            <tr>
+                <td><input id="b00" type="button" onclick="clickbutton(this)" value="0"></td>
+                <td><input id="b_pun" type="button" onclick="clickbutton(this)" value="."></td>
+                <td><input id="b_sum" type="button" onclick="clickbutton(this)" value="+"></td>
+            </tr>
+            <tr>
+                <td><input id="b_ig" type="button" onclick="clickbutton(this)" value="="></td>
+            </tr>
+        </table>
 
+        <div class="switch-button">
+            <p id="switch_boton">Modo sepia 🔥</p>
+            <!-- Checkbox -->
+            <input type="checkbox" name="switch-button" id="switch-checkbox" class="switch-button__checkbox">
+            <!-- Botón -->
+            <label for="switch-checkbox" class="switch-button__label"></label>
+        </div>
+       
         <footer>
             <marquee>
                 <p>Author: Gerly Daniel Arteaga Bernal</p>
             </marquee>
         </footer>
-    </body>
+    </div>
+    
+    <script type="text/javascript" src="/js/calculadora.js"></script>
+</body>
 </html>
