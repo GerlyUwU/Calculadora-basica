@@ -19,8 +19,8 @@ function borrar() {
     pantalla.value = operacion;
 }
 
-function clickbutton() {
-    switch (Element.id) {
+function clickbutton(element) {
+    switch (element.id) {
         case 'b00':
             operacion = operacion + "0";
             break;
@@ -51,7 +51,7 @@ function clickbutton() {
         case 'b09':
             operacion = operacion + "9";
             break;
-        case 'bsum':
+        case 'b_sum':
             if (operacion.length > 0 && validarOperaciones()) {
                 operacion = operacion + "+";
             }
@@ -89,5 +89,30 @@ function clickbutton() {
             break;
     }
     pantalla.value = operacion;
+}
+
+function validarOperaciones() {
+    if (!operacion.endsWith("+") &&
+        !operacion.endsWith("-") && !operacion.endsWith("*")
+        && !operacion.endsWith("/")) {
+        return true;
+    }
+    return false;
+
+}
+
+function validarPunto() {
+    if (operacion.length == 0 || !validarOperaciones()) {
+        return true;
+    }
+    var temp = operacion;
+    temp = temp + '.';
+    try {
+        eval(temp);
+        return true;
+    } catch (e) {
+        console.log(e);
+    }
+    return false;
 }
 

@@ -83,14 +83,14 @@ input[type=button]:hover {
     background-color: #C6F9B7;
     border: none;
     color: black;
-    width: 100%;
+    width: 400%;
     height: 50px;
     border-radius: 5%;
     transition-duration: 0.5s;
 
 }
 
-#big:hover{
+#b_ig:hover{
     background-color: #66CF47;
 }
 
