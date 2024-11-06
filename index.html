@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Contenedor principal de la calculadora -->
     <div class="contenido">
         <header><h1>Calculadora Básica</h1></header>
         <table>
@@ -18,6 +18,8 @@
             <tr>
                 <td colspan="2"><input id="b_lim" type="button" onclick="limpiar()" value="limpiar"></td>
                 <td colspan="2"><input id="b_bor" type="button" onclick="borrar()" value="borrar"></td>
+                <td><input id="b_left_parent" type="button" onclick="clickbutton(this)" value=" ( "></td>
+                <td><input id="b_right_parent" type="button" onclick="clickbutton(this)" value=" ) "></td>
             </tr>
             <tr>
                 <td><input id="b07" type="button" onclick="clickbutton(this)" value="7"></td>
@@ -43,7 +45,7 @@
                 <td><input id="b_sum" type="button" onclick="clickbutton(this)" value="+"></td>
             </tr>
             <tr>
-                <td><input id="b_ig" type="button" onclick="clickbutton(this)" value="="></td>
+                <td colspan="4"><input id="b_ig" type="button" onclick="clickbutton(this)" value="="></td>
             </tr>
         </table>
 
@@ -54,15 +56,14 @@
             <!-- Botón -->
             <label for="switch-checkbox" class="switch-button__label"></label>
         </div>
-       
+    </div> 
 
-        <footer>
-            <marquee>
-                <p>Author: Gerly Daniel Arteaga Bernal</p>
-            </marquee>
-        </footer>
-    </div>
-    
+    <footer>
+        <marquee>
+            <p>Autor: Gerly Daniel Arteaga Bernal       GitHub: GerlyUwU</p>
+        </marquee>
+    </footer>
+
     <script type="text/javascript" src="/js/calculadora.js"></script>
 </body>
 </html>
